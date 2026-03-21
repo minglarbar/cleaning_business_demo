@@ -499,7 +499,9 @@ nav a{
 .logo-text{
     font-size:14px;
 }
-
+.logo-area{
+    transform:translateX(-30px);
+}
 .trust-bar{
     gap:15px;
     font-size:14px;
