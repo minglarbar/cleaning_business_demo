@@ -32,66 +32,18 @@ header{
     top:0;
     z-index:1000;
 }
-.logo-area{
-    display:flex;
-    align-items: center;
-    gap:3px;
-}
 .logo{
     width: 80px;
     height:auto;
     transition: transform 0.3s ease;
+    background: none;
 }
-
-.logo:hover{
-    transform:scale(1.1);
-}
-
 .logo-text{
     font-weight:bold;
     font-size:18px;
     transition: transform 0.3s ease;
     animation: color-change 4s infinite;
 }
-
-
-.logo-text:hover{
-    color:#0077c0;
-    transform:scale(1.1);
-}
-
-.nav{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:15px 0;
-}
-
-.nav a{
-    margin-left:20px;
-    text-decoration: none;
-    color:#0077ff;
-    display:inline-block;
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-
-nav a:hover{
-    font-weight: bold;
-    transform: scale(1.1);
-}
-
-
-.menu-toggle{
-    display:none;
-    background:none;
-    border:none;
-    font-size:40px;
-    color:#0077cc;
-    /* margin-left:10px; */
-}
-
-
-
 /* Defines the animation stages */
 @keyframes color-change {
   0% {
@@ -104,6 +56,10 @@ nav a:hover{
     color: #0077c0; /* End Color */
   }
 
+}
+.logo-text:hover{
+    color:#0077c0;
+    transform:scale(1.1);
 }
 .phone-icon{
     width:28px;
@@ -118,30 +74,83 @@ nav a:hover{
     text-wrap:nowrap;
     
 }
-.phone-box{
-    display:flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: center;
-    gap:6px;
-    text-decoration:none;
-    color:#0077c0;
-    font-size:13px;
+.menu-toggle{
+    display: none;
+    background:none;
+    border:none;
+    font-size:40px;
+    color:#0077cc;
+    /* margin-left:10px; */
 }
-.phone-box:hover{
-    transform: scale(1.05);
-}
-.phone_and_menu{
+.header-container{
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: nowrap;
     align-items: center;
+    justify-content: space-between;
+}
+.logo-area{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;    
+    gap:3px;
+    margin-right: 100px;
+}
+.nav-div{
+    margin-right: 100px;
+}
+.nav{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 0;
+}
+.nav a{
+    margin-left:20px;
+    text-decoration: none;
+    color:#0077ff;
+    display:inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+nav a:hover{
+    font-weight: bold;
+    transform: scale(1.1);
+}
+.phone_and_number{
+    transition: 0.15s ease;
+}
+.phone_and_number:hover{
+    transform: scale(1.1);
 }
 /* -------------------------------------------------- */
 /* Header End */
 /* -------------------------------------------------- */
 
+/* -------------------------------------------------- */
+/* Trust Bar Section Starts */
+/* -------------------------------------------------- */
+.trust-bar{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+  background:#ffffff;
+  padding:20px;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+  font-weight:bold;
+}
 
+.trust-item{
+  color:#0077cc;
+  font-size:16px;
+}
+/* -------------------------------------------------- */
+/* Trust Bar Section Ends */
+/* -------------------------------------------------- */ 
 
 /* -------------------------------------------------- */
 /* Hero Section Start */
@@ -161,7 +170,7 @@ nav a:hover{
     border-radius: 10px;
     display:inline-block;
     max-width: 600px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 .btn, .hero_call{
     display:inline-block;
@@ -349,7 +358,7 @@ font-size:clamp(16px,2.5vw,20px);
     flex-direction:column;
     gap:12px;
 }
-input, textarea{
+input, textarea, select{
     padding:10px;
     border:1px solid #ccc;
     border-radius:6px;
@@ -366,6 +375,86 @@ footer{
     color:white;
     margin-top:40px;
     
+}
+
+/* Modal Background */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Box */
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  animation: popup 0.3s ease;
+}
+
+/* Success Popup Box */
+
+.success-box{
+text-align:center;
+padding:30px;
+}
+
+/* Circle */
+
+.checkmark-circle{
+width:80px;
+height:80px;
+border-radius:50%;
+background:#28a745;
+margin:0 auto 20px;
+display:flex;
+align-items:center;
+justify-content:center;
+animation:pop 0.4s ease;
+}
+
+/* Checkmark */
+
+.checkmark{
+  width:25px;
+  height:50px;
+  border-right:5px solid white;
+  border-bottom:5px solid white;
+  transform:rotate(45deg);
+}
+
+/* Close Button */
+
+.close-btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Pop Animation */
+
+@keyframes popup {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 
@@ -396,6 +485,11 @@ nav a{
 }
 
 .logo-text{
+    font-size:14px;
+}
+
+.trust-bar{
+    gap:15px;
     font-size:14px;
 }
 
