@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cleaners</title>
+        <title>Cleaners Website Demo</title>
         <link rel="stylesheet" href="styles.css">
         <!-- 
         BASIC SEO STTINGS
@@ -15,20 +15,20 @@
 
         Keywords → small SEO signal
         -->
-        <meta name="description" content="SparkleClean Experts provides reliable cleaning services in Brisbane suburbs. Call now for fast and affordable plumbing services.">
+        <meta name="description" content="SparkleClean Experts provides reliable cleaning services in Brisbane suburbs. Call now for fast and affordable cleaning services.">
         <meta name="keywords" content="cleaners, cleaning services, Cleaners, Brisbane">
-        <meta name="author" content="your business name">
+        <meta name="author" content="SparkleClean Experts">
 
             <!-- BASIC SEO STTINGS
         Add Open Graph Tags (For Social Sharing)
         When someone shares the site on Facebook or WhatsApp, these tags control the preview. 
         NEED TO CUSTOMISE THE URL, CONTENT, DESCRIPTIONS, IMAGE CONTENT
         -->
-        <meta property="og:title" content="SparkleClean Expers Cleaning Service">
+        <meta property="og:title" content="SparkleClean Experts Cleaning Service">
         <meta property="og:description" content="Reliable cleaning services in Brisbane. Fast response and affordable rates.">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://yourwebsite.com">
-        <meta property="og:image" content="https://yourwebsite.com/cleaning-preview.jpg">
+        <meta property="og:url" content="https://minglarbar.github.io/cleaning_business_demo">
+        <meta property="og:image" content="https://minglarbar.github.io/cleaning_business_demo/images/cleaning-preview.jpg">
         <!-- 
         BASIC SEO STTINGS    
         This helps Google understand the business. 
@@ -39,17 +39,17 @@
         "@context": "https://schema.org",
         "@type": "Cleaners",
         "name": "Sparkle Clean Experts cleaning",
-        "telephone": "0416664910",
+        "telephone": "0400512433",
         "address": {
         "@type": "PostalAddress",
-        "streetAddress": "67 Hillgrove Street",
+        "streetAddress": "7 Hillgrove Street",
         "addressLocality": "Taigum",
         "addressRegion": "QLD",
         "postalCode": "4018",
         "addressCountry": "AU"
         },
         "areaServed": "Brisbane",
-        "url": "https://yourwebsite.com"
+        "url": "https://minglarbar.github.io/cleaning_business_demo"
         }
         </script>
     </head>
@@ -60,85 +60,70 @@
          Include Logo, business name, navigation links to below sections. 
          In mobile, hide navigation links and show humburger menu. 
         -->
-        <header>
-        <div class="container nav">
-
-            <!-- LEFT: Logo -->
-            <div class="logo-area">
-            <img src="images/logo-icon.png" class="logo">
-            <span class="logo-text">SparkleClean Experts</span>
+        <div class="header">
+            <div class="header-left-section">
+                <img class="logo"src="images/logo-icon.png">
+                <span class="logo-text">SparkleClean <br> Experts</span>
             </div>
-
-            <!-- CENTER: Navigation -->
-            <nav id="mainNav">
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contacts</a>
-            <a href="#areas">Areas</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#quotes">Quote</a>
-            </nav>
-
-            <!-- RIGHT: Phone + Menu -->
-            <div class="phone_and_menu">
-
+            <div class="header-middle-section">
+                <div id="mainNav" class="nav">
+                    <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link" href="#services">Services</a>
+                    <a class="nav-link" href="#contact">Contacts</a>
+                    <a class="nav-link" href="#areas">Areas</a>
+                    <a class="nav-link" href="#reviews">Testimonials</a>
+                    <a class="nav-link" href="#quotes">Quote</a>
+                </div>
+            </div>
+            <div class="header-right-section">
                 <a class="phone-box" href="tel:0400512433">
-                    <img src="images/phone.png" class="phone-icon">
-                    <p class="phone-number">0400 512 433</p>
+                    <img class="phone-icon" src="images/phone-call.png">
+                    <span class="phone-number">0400 512 433</span>
                 </a>
-
                 <button class="menu-toggle" id="menuToggle">☰</button>
-
             </div>
-
         </div>
-        </header>
    
         <!-- Hero Section -->
-        <!-- <section class="hero">
-            <div class="container hero-content">
-                
+        <section class="hero" id="home">
                 <div class="hero-box">
                     <h1>Professional Cleaning Sercvices</h1>
-                    <p>Residential and Commercial cleaning you can trust.</p>
+                     <h2 class="hero-text">Residential and Commercial cleaning you can trust.</h2>                    
+                    <p class="hero-text"></p>
                     <a href="#quotes" class="btn">Free Quote</a>
-                    <a  class="hero_call" href="tel:0416664910">Call Now</a>
-                    
+                    <a  class="hero_call" href="tel:0400512433">Call Now</a>
+                        
                     <br><br>
                     <div class="hero-rating">
                         ⭐ ⭐ ⭐ ⭐ ⭐
                         <p>4.9 Google Rating – Trusted by Several Customers</p>
-                    </div>
+                    </div> 
                 </div>
-            </div>
-
-        </section> -->
-        <section class="hero" id="home">
-            <div class="hero-box">
-                <h1>Professional Cleaning Sercvices</h1>
-                
-                <h2 class="hero-text">Residential and Commercial cleaning you can trust.</h2>
-                <a href="#quotes" class="btn">Free Quote</a>
-                <a  class="hero_call" href="tel:0400512433">Call Now</a>
-                    
-                <br><br>
-                <div class="hero-rating">
-                    ⭐ ⭐ ⭐ ⭐ ⭐
-                    <p>4.9 Google Rating – Trusted by Several Customers</p>
-                </div> 
-            </div>
         </section>
+         <!--Trust worthy Section-->
+        <section class="trust-bar">
+
+            <div class="trust-item">✔ Licensed & Insured</div>
+
+            <div class="trust-item">✔ Same-Day Service</div>
+
+            <div class="trust-item">✔ 5 Stars Rated</div>
+
+        </section>
+
+
 
         <!-- Service Section -->
         <section class="service_section" id="services">
             <div class="container">
                 <h2 class="sections-title">Our Services</h2>
+                
                 <div class="grid">
 
                     <div class="service">
-                    <div class="img"><img src="images/home.png" alt="Residential Cleaning"></div>
-                    <h3>Residential Cleaning</h3>
-                    <p>Keep your home pristine with our regular housekeeping, dusting, and sanitization services.</p>
+                        <div class="img"><img src="images/home.png" alt="Residential Cleaning"></div>
+                        <h3>Residential Cleaning</h3>
+                        <p>Keep your home pristine with our regular housekeeping, dusting, and sanitization services.</p>
                     </div>
 
                     <div class="service">
@@ -166,7 +151,7 @@
                     </div>
 
                     <div class="service">
-                        <div class="img"><img src="images/cleaning-bottle.png" alt="Deep Cleaning"></div>
+                        <div class="img"><img src="images/cleaning-bottle.png" alt="cleaning bottle"></div>
                         <h3>Deep Cleaning</h3>
                         <p>Intensive, top-to-bottom scrub down targeting hidden dirt, grime, and neglected areas.</p>
                     </div>
@@ -175,16 +160,16 @@
         </section> 
 
         <!-- Contact Us Section -->
-         <section class="contact_section" id="contact">
+         <section class="contact_section">
             <div class="container">
-                <h2 class="sections-title">Contact Us</h2>
+                <h2 class="sections-title" id="contact">Contact Us</h2>
                 <div class="contacts_container">
                     <div class="contact-card">
                         <div class="icon-circle">
-                            <a href="tel:0400000000"><img src="images/phone-call.png" alt="Phone"></a>
+                            <a href="tel:0400512433"><img src="images/phone-call.png" alt="Phone"></a>
                         </div>
                         <h3>Phone</h3>
-                        <p><a href="tel:0400000000">0400 512 433</a></p>
+                        <p><a href="tel:0400512433">0400 512 433</a></p>
                     </div>
 
                     <div class="contact-card">
@@ -204,8 +189,8 @@
                 <h2 class="area-title">Areas We Serve</h2>
                 <p class="center">
                     We provide cleaning services across the entire metropolitan area.
-                    Contact us to check availability in your location.
-                    We bring our premium cleaning equipment and highly trained staff directly to your door.
+                    Get in touch to confirm availability in your suburb.
+                    Our skilled team arrives fully equipped, ready to deliver reliable service right at your doorstep.
                 </p>
                 <div class="map">
                 <iframe
@@ -221,10 +206,10 @@
         </section>
 
         <!-- Review Section -->
-        <Section class="review_section" id="reviews">
+        <Section class="review_section" >
             <div class="container">
 
-            <h2 class="sections-title">Customer Reviews</h2>
+            <h2 class="sections-title" id="reviews">Customer Reviews</h2>
 
                 <div class="testimonial-slider">
 
@@ -247,9 +232,9 @@
         </Section>
 
         <!-- Quotation Section -->
-        <section class="quote_section" id="quotes">
+        <section class="quote_section" >
             <div class="container">
-                <h2 class="sections-title">Request a Free Quote</h2>
+                <h2 class="sections-title" id="quotes">Request a Free Quote</h2>
                 <form id="quoteForm">
                     <input type="text" placeholder="Your Name" name="name" id="name" required>
                     <input type="email" placeholder="Email Address" name="email" id="email" required>
@@ -262,11 +247,12 @@
                         <option>Office Cleaning</option>
                         <option>Carpet Cleaning</option>
                         <option>Bond Cleaning</option>          
+                        <option>Routine Cleaning</option>
                         <option>Other</option>
                     </select>
                     <label>Suburb</label>
                     <input type="text" name="suburb" id="suburb">
-                    <textarea placeholder="Cleaning details" name="message" id="message" rows="4"></textarea>
+                    <textarea placeholder="Job details" name="message" id="message" rows="4"></textarea>
                     <!-- <button class="btn">Send Request</button> -->
                     <button class="btn" type="submit">Get A Free Quote</button>
                 </form>
@@ -366,12 +352,11 @@
         modal.style.display = "none";
     }
     }
-    <!-- This script is for hamburger menu for mobiles -->
+    //This script is for hamburger menu for mobiles 
 
     const menuBtn = document.getElementById("menuToggle");
     const nav = document.getElementById("mainNav");
     const navLinks = document.querySelectorAll("#mainNav a");
-
     menuBtn.addEventListener("click", function(){
 
         nav.classList.toggle("show");
