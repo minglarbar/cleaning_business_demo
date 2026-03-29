@@ -19,79 +19,52 @@ body{
     text-align: center;
     margin-bottom: 40px;
 }
+
+* {
+    box-sizing: border-box;
+}
+
 /* Common settings Ends*/
 
 
 /* -------------------------------------------------- */
 /* Header Start */
 /* -------------------------------------------------- */
-header{
+.header{
     background:white;
-    border-bottom:1px solid #ddd;
+    border-bottom:none;
     position: sticky;
     top:0;
     z-index:1000;
+    height:88px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #563232; */
+    background-image: url("images/wooden-wall.jpg");
 }
-.logo-area{
+.header-left-section{
     display:flex;
     align-items: center;
-    gap:3px;
+    gap:0px;
 }
 .logo{
-    width: 80px;
+     width: 80px;
     height:auto;
     transition: transform 0.3s ease;
 }
-
-.logo:hover{
-    transform:scale(1.1);
-}
-
+/* .logo:hover{
+     transform:scale(1.1);
+} */
 .logo-text{
     font-weight:bold;
     font-size:18px;
     transition: transform 0.3s ease;
     animation: color-change 4s infinite;
 }
-
-
 .logo-text:hover{
     color:#0077c0;
     transform:scale(1.1);
 }
-
-.nav{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:15px 0;
-}
-
-.nav a{
-    margin-left:20px;
-    text-decoration: none;
-    color:#0077ff;
-    display:inline-block;
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-
-nav a:hover{
-    font-weight: bold;
-    transform: scale(1.1);
-}
-
-
-.menu-toggle{
-    display:none;
-    background:none;
-    border:none;
-    font-size:40px;
-    color:#0077cc;
-    /* margin-left:10px; */
-}
-
-
-
 /* Defines the animation stages */
 @keyframes color-change {
   0% {
@@ -105,37 +78,74 @@ nav a:hover{
   }
 
 }
-.phone-icon{
-    width:28px;
-    height:28px;
-    margin-bottom:-15px;
-    transform: translateX(20px);
+.nav{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    padding-top:20px;
+}
+.nav a{
+    margin-left:15px;
+    text-decoration: none;
+    color:#0077ff;
+    display:inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+.nav a:hover{
+    font-weight: bold;
+    transform: scale(1.01);
+    /* box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.8);   */
+}
+.nav-link{
+    /* border:1px solid white; */
+    padding:10px;
+    border-radius: 20px;
 }
 
-.phone-number{
-    font-size:12px;
-    text-align:center;
-    text-wrap:nowrap;
-    
+
+.header-right-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
 }
 .phone-box{
-    display:flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: center;
-    gap:6px;
-    text-decoration:none;
-    color:#0077c0;
-    font-size:13px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    border: 1px solid #0077cc;
+    padding:20px 5px;
+    border-radius: 10px;
+    /* background-color: orange; */
+    height:30px;
+    text-decoration: none;
+
 }
 .phone-box:hover{
     transform: scale(1.05);
 }
-.phone_and_menu{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.phone-icon{
+    width:20px;
+    height:28px;
+    margin-right: 1px;
+}
+.phone-number{
+    font-size:15px;
+    text-align:center;
+    text-wrap:nowrap;
+    color:#0077c0;
+}
+.menu-toggle{
+    display:none;
+    /* background-color: orange; */
+    background: none;
+    border:none;
+    font-size:25px;
+    color:#0077cc;
+    height:50px;
+    border-radius: 10px;
+    margin-bottom: 3px;
+    /* margin-left:10px; */
 }
 /* -------------------------------------------------- */
 /* Header End */
@@ -157,7 +167,7 @@ nav a:hover{
 }
 
 .trust-item{
-  color:#0077cc;
+  color:#0077c0;
   font-size:16px;
 }
 /* -------------------------------------------------- */
@@ -182,9 +192,7 @@ nav a:hover{
     width: 100%;
     min-height: 100vh;
 
-    /* background: rgba(170, 141, 141, 0.85);  */
-
-background: rgba(85, 153, 243, 0.65);
+    background: rgba(85, 153, 243, 0.65);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -225,7 +233,7 @@ h2{
     cursor:pointer;
 }
 .hero_call{
-    width: 83px;
+    width: 130px;
 }
 .btn:hover{
     transform:translateY(-2px);
@@ -244,10 +252,29 @@ h2{
 
 
 /* -------------------------------------------------- */
+/* Info Section Start */
+/* -------------------------------------------------- */
+.Info_section{
+    padding:80px 0px;
+
+}
+.h1-text, .hero-rating{
+    color:white;
+}
+/* -------------------------------------------------- */
+/* Info Section End */
+/* -------------------------------------------------- */
+
+
+
+
+
+
+/* -------------------------------------------------- */
 /* Services Section Starts */
 /* -------------------------------------------------- */
 .service_section{
-    padding:80px 0px;
+    padding-top:100px;
 }
 
 .grid{
@@ -264,7 +291,10 @@ h2{
     box-shadow:0 5px 15px rgba(0,0,0,0.08);
     text-align: center;
     color:#0077c0;
+    width: 100%;
     max-width: 300px;
+    margin: 0 auto;
+    border:1px solid #0077c0;
 }
 .service p{
     text-align: left;
@@ -273,13 +303,12 @@ h2{
   transform:translateY(-8px);
   box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
-.img{
-    padding-top:50px;
-    height:160px;
-    background:#e5e7eb;
-    border-radius:6px;
-    margin-bottom:15px;
-}
+
+
+/* .img img:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+} */
 /* -------------------------------------------------- */
 /* Services Section Ends */
 /* -------------------------------------------------- */
@@ -287,6 +316,11 @@ h2{
 /* -------------------------------------------------- */
 /* Contacts Section Starts */
 /* -------------------------------------------------- */
+
+.contact_section{
+    margin-top:100px;
+}
+
 .contacts_container{
     display:flex;
     justify-content:center;
@@ -367,7 +401,9 @@ h2{
 /* -------------------------------------------------- */
 /* Review Section Starts */
 /* -------------------------------------------------- */
-
+.review_section{
+    margin-top:100px;
+}
 .testimonial-slider{
   position:relative;
   max-width:700px;
@@ -408,11 +444,14 @@ font-size:clamp(16px,2.5vw,20px);
     display:flex;
     flex-direction:column;
     gap:12px;
+    width:100%;
 }
 input, textarea, select{
-    padding:10px;
-    border:1px solid #ccc;
+    padding:12px;
+    border:1px solid #ccc;;
     border-radius:6px;
+    width: 100%;
+    font-size: 16px;
 }
 #quotes{
     scroll-margin-top: 100px;
@@ -516,21 +555,23 @@ animation:pop 0.4s ease;
 /* Mobile Friendly CSS Codes */
 @media(max-width:768px){
 
-nav{
+#mainNav{
     display:none;
 }
-nav.show{
-    display:block;
+#mainNav.show{
+    display:flex;
+    flex-direction:column;
     position:absolute;
     top:70px;
     right:20px;
     background:white;
     padding:20px;
-    border:1px solid #ddd;
     border-radius:8px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    z-index:999;
 }
-nav a{
-    display:block;
+
+#mainNav a{
     margin:10px 0;
 }
 
@@ -541,12 +582,16 @@ nav a{
 .logo-text{
     font-size:14px;
 }
-.logo-area{
+/* .logo-area{
     transform:translateX(-30px);
-}
+} */
 .trust-bar{
     gap:15px;
     font-size:14px;
 }
+
+.service{
+        max-width: 100%;
+    }
 
 }
