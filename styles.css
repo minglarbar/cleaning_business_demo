@@ -114,12 +114,11 @@ body{
     align-items: center;
     margin-right: 10px;
     border: 1px solid #0077cc;
-    padding:20px 5px;
+    padding:10px 5px;
     border-radius: 10px;
     /* background-color: orange; */
     height:30px;
     text-decoration: none;
-
 }
 .phone-box:hover{
     transform: scale(1.05);
