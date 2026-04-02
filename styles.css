@@ -273,7 +273,7 @@ h2{
 /* Services Section Starts */
 /* -------------------------------------------------- */
 .service_section{
-    padding-top:100px;
+    padding-top:50px;
 }
 
 .grid{
@@ -380,7 +380,6 @@ h2{
 /* Area Section Starts */
 /* -------------------------------------------------- */
 .area_section{
-    padding: 80px 0px;
     background:#0077ff;
     color:white;
 }
@@ -391,6 +390,9 @@ h2{
 }
 .center{
     text-align:center;
+}
+#areas{
+    scroll-margin-top: 100px;
 }
 /* -------------------------------------------------- */
 /* Area Section Ends */
